@@ -1,0 +1,38 @@
+{
+  "id": "ewing-literature-corpus-extract-schema-003",
+  "title": "Extraction (assertion) schema with mandatory source spans + ontology normalization",
+  "project": "ewing-literature-corpus",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Building on the corpus record schema (schema-002), the project needs an extraction (assertion) schema so every extracted statement is grounded and normalizable. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. The schema must make a verbatim source span and aggregate-only marking mandatory and forbid any patient-level content or clinical advice.",
+  "objective": "Define the extraction (assertion) schema with mandatory verbatim source spans and ontology-normalization fields, as a projection-compatible layer over schema-002.",
+  "acceptanceCriteria": [
+    "Each assertion carries a mandatory verbatim source span (PMCID + section + character offsets + quote) consistent with the schema-002 BioC offset model.",
+    "Each assertion carries aggregateOnly:true and ontology-normalization fields (ontologyId, ontologyVersion, normConfidence); unmapped entities are flagged and kept as surface forms.",
+    "The schema structurally forbids individual-patient content and clinical advice; only aggregate research statements are representable.",
+    "At least one worked example assertion record is included; the schema validates in CI; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/ewing-literature-corpus-schema-002.json",
+    "BioC text-mining interchange format specification"
+  ],
+  "output": "schema/extraction.schema.json",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

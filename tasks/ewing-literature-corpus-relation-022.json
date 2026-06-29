@@ -1,0 +1,36 @@
+{
+  "id": "ewing-literature-corpus-relation-022",
+  "title": "Relation extraction (gene-drug, fusion-phenotype), grounded",
+  "project": "ewing-literature-corpus",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Once entity extraction is stable, grounded relation extraction (gene-drug, fusion-phenotype) adds structure for consumers. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Every relation is source-spanned and aggregate-only; a domain reviewer verifies a sample.",
+  "objective": "Build grounded relation extraction (gene-drug, fusion-phenotype) with mandatory source spans.",
+  "acceptanceCriteria": [
+    "Relation extraction (gene-drug, fusion-phenotype) produces only grounded relations, each with a verbatim source span and aggregateOnly:true.",
+    "Groundedness re-location check enforced in CI; ungrounded relations dropped.",
+    "Domain reviewer verifies a sample for scientific faithfulness; no patient-level data or advice.",
+    "Code MIT-licensed; tests + CI green; DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "src/relation/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

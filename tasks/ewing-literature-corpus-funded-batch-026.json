@@ -1,0 +1,37 @@
+{
+  "id": "ewing-literature-corpus-funded-batch-026",
+  "title": "Funded large-batch extraction run (hard budget cap)",
+  "project": "ewing-literature-corpus",
+  "type": "data",
+  "lane": "funded",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "If donated-lane throughput is insufficient, a funded large-batch extraction run may execute via packages/runner on an Anthropic API key with a hard per-task budget cap (fundedBudgetUsd) it must never exceed, with a public cost ledger. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Same extraction guardrails as the donated lane apply: grounded, aggregate-only assertions, domain + License/PII sign-off. The fundedBudgetUsd value here is a placeholder cap to be confirmed when escrow is defined.",
+  "objective": "Run a funded large-batch extraction (via packages/runner, hard budget cap) producing grounded, aggregate-only assertions -- only if donated throughput is insufficient.",
+  "acceptanceCriteria": [
+    "Runs only via packages/runner on an Anthropic API key with a hard per-task budget cap (fundedBudgetUsd); execution never exceeds the cap.",
+    "Large-batch extraction produces only grounded, aggregate-only assertions (same guardrails as ner-014/biomarker-018); the groundedness re-location check is enforced.",
+    "A public cost ledger is recorded; the batch is engaged only if donated-lane throughput is demonstrably insufficient.",
+    "Domain reviewer and License/PII reviewer sign-off recorded, as for the equivalent donated extraction."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "output/funded-batch/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0",
+  "fundedBudgetUsd": 500
+}

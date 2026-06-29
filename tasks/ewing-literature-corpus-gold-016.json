@@ -1,0 +1,34 @@
+{
+  "id": "ewing-literature-corpus-gold-016",
+  "title": "Gold-standard annotated eval set + inter-annotator agreement",
+  "project": "ewing-literature-corpus",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A held-out, double-annotated gold set is needed to evaluate extraction honestly. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. The gold set covers entity types and assertion groundedness and is released CC-BY-4.0 with provenance.",
+  "objective": "Build a gold-standard annotated eval set with measured inter-annotator agreement.",
+  "acceptanceCriteria": [
+    ">= 2 annotators independently annotate a held-out article sample; inter-annotator agreement (Cohen's kappa) computed and >= 0.7; adjudication process recorded.",
+    "Gold set covers entity types + assertion groundedness; released CC-BY-4.0 with provenance."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "output/gold-eval-set/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

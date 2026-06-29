@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-normalize-015",
+  "title": "Ontology normalization (HGNC/MONDO/Cellosaurus/ChEBI) + fusion vocab",
+  "project": "ewing-literature-corpus",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Extracted entities must map to pinned ontologies so downstream consumers get stable identifiers. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Ontology versions are recorded and bumped only via a deliberate task; unmapped entities are flagged rather than guessed.",
+  "objective": "Normalize extracted entities to pinned ontologies (HGNC/MONDO/Cellosaurus/ChEBI) with a controlled fusion vocabulary.",
+  "acceptanceCriteria": [
+    "Maps entities to pinned ontologies (HGNC, MONDO/NCIt, Cellosaurus, ChEBI) recording ontologyId + ontologyVersion + normConfidence; fusion types mapped via the in-repo controlled vocabulary to HGNC ids; unmapped entities flagged unmapped (kept as surface forms).",
+    "Spot-check examples documented (e.g. Ewing sarcoma -> MONDO:0012817; A673 -> CVCL_0080).",
+    "Ontology versions recorded in specVersions; bumped only via a deliberate task."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "src/normalize/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

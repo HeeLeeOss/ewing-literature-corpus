@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-query-005",
+  "title": "Ewing PMC retrieval query + recall/precision against a seed set",
+  "project": "ewing-literature-corpus",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The corpus needs a reproducible PMC OA retrieval query for Ewing sarcoma literature, measured against a known seed set so recall/precision are honest. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Retrieval is limited to the PMC OA Subset; non-OA hits are reduced to bibliographic metadata downstream.",
+  "objective": "Define and evaluate the Ewing sarcoma PMC OA retrieval query, reporting recall/precision against a documented seed set.",
+  "acceptanceCriteria": [
+    "PMC OA retrieval query for Ewing sarcoma is documented (search terms, fields, filters) and scoped to the PMC OA Subset.",
+    "Recall/precision measured against a documented seed set of known Ewing OA articles, with the numbers reported.",
+    "The query and evaluation are reproducible: committed query string + seed-set list + method."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "research/retrieval-query.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

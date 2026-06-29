@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-outreach-008",
+  "title": "Consumer outreach (KG project, sarcoma labs, advocacy) + shortlist",
+  "project": "ewing-literature-corpus",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "A real downstream consumer is what turns the corpus into a delivered outcome, so this task opens outreach to the KG project, sarcoma labs, and advocacy orgs and compiles a shortlist. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. No commitments are fabricated; verifiedNeed stays false until a consumer confirms use (partner-013).",
+  "objective": "Compile a consumer/partner shortlist and open at least one outreach thread.",
+  "acceptanceCriteria": [
+    "Outreach shortlist compiled (ewsr1-fli1-knowledge-graph project, sarcoma labs, advocacy orgs) with a contact channel per candidate.",
+    "At least one outreach thread opened, with status recorded.",
+    "No commitments fabricated; verifiedNeed remains false until a named consumer confirms (partner-013)."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "outreach/consumer-shortlist.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

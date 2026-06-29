@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-biomarker-018",
+  "title": "Aggregate biomarker/outcome assertion extraction (expert-verified, not advice)",
+  "project": "ewing-literature-corpus",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "This task extracts only aggregate biomarker/outcome statements, each source-spanned and aggregate-only, with domain-expert verification. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. No patient-level data, no clinical advice, and no synthesis: this is faithful reporting of published aggregate findings, gated by the domain and License+PII reviewers.",
+  "objective": "Extract aggregate biomarker/outcome assertions (expert-verified, source-spanned, aggregate-only) -- never advice.",
+  "acceptanceCriteria": [
+    "Only aggregate research/biomarker/outcome statements extracted, each with a source span and aggregateOnly:true; no patient-level data, no clinical advice, no synthesis.",
+    ">= 100 assertions domain-expert verified for scientific faithfulness, each with reviewer attribution + timestamp recorded in verification.",
+    "License/PII reviewer confirms no ND full text or identifiable detail used."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "output/biomarker-assertions/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

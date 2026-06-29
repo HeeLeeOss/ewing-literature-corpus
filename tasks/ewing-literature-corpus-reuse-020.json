@@ -1,0 +1,34 @@
+{
+  "id": "ewing-literature-corpus-reuse-020",
+  "title": "Track and verify downstream reuse events",
+  "project": "ewing-literature-corpus",
+  "type": "research",
+  "lane": "donated",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Outcomes are measured by real downstream reuse, so this task tracks and verifies external reuse events with externally verifiable evidence. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. No self-reported reuse counts.",
+  "objective": "Track and verify downstream reuse events of the corpus with externally verifiable evidence.",
+  "acceptanceCriteria": [
+    ">= 1 verifiable external/downstream reuse event recorded (e.g. an ewsr1-fli1-knowledge-graph commit ingesting the corpus, a citation, or written consumer confirmation).",
+    "Each event links to externally verifiable evidence (no self-reported reuse)."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "outcomes/reuse-events.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
