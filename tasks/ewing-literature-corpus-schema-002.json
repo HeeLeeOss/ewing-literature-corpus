@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-schema-002",
+  "title": "Corpus record schema + provenance model (BioC-compatible)",
+  "project": "ewing-literature-corpus",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "ewing-sarcoma", "open-access", "text-mining", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Ewing sarcoma is a rare, aggressive pediatric/AYA cancer whose research is scattered across thousands of papers. Before ingesting or extracting anything, the project needs one canonical corpus record schema that captures bibliographic metadata, per-article machine-readable license, PII/case-report disposition, IMRaD section structure with BioC-compatible offsets, and complete provenance. Binding guardrails: open-access (PMC OA Subset) data only; no identifiable patient data; no medical advice; provenance on every record. Full text is represented only when the license permits derivatives; ND/closed articles are metadata-only.",
+  "objective": "Define the canonical corpus record schema and provenance model that all corpus outputs (BioC export, Croissant metadata, extraction layer) are projections of.",
+  "acceptanceCriteria": [
+    "Canonical record documents every field: pmcid/pmid/doi, title/journal/pubDate/authors[] (names as published; no contact PII), license {id, spdx, url, redistributable, derivativesAllowed, commercialUseAllowed, snapshotRef}, oaStatus, provenance {source, retrievedAt, oaPackageVersion, attribution}, caseReport {isCaseReport, individualDetailPresent, disposition}, sections[] {type, charStart, charEnd, text?}, fullTextIncluded, specVersions {bioc, croissant}.",
+    "Full text (sections[].text) is represented only when license.derivativesAllowed is true; metadata-only records (text omitted) are valid and explicitly supported for ND/closed articles.",
+    "BioC-compatible character-offset model is documented; Croissant export is defined as a projection of the canonical record.",
+    "License snapshot format specified (committed copy + SHA-256 + Wayback URL) and required in provenance.",
+    "Schema states our added content is licensed CC-BY-4.0 while per-article redistributed text retains its original license, recorded per record; at least one worked example record is included.",
+    "pnpm build && pnpm test && pnpm lint pass for any committed tooling/JSON-schema; commit is DCO signed-off."
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\ewing-literature-corpus\\PLAN.md",
+    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "PubMed Central Open Access Subset documentation (license terms; OA Web Service; BioC API)",
+    "BioC text-mining interchange format specification",
+    "Croissant ML metadata specification"
+  ],
+  "output": "A corpus record schema definition plus provenance model, committed to the project repo and ready for reuse by the ingestion and extraction tasks.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
