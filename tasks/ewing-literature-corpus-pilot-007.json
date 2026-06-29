@@ -1,0 +1,37 @@
+{
+  "id": "ewing-literature-corpus-pilot-007",
+  "title": "Pilot: ~25 OA articles curated end-to-end + entity-mention extraction, grounded + verified",
+  "project": "ewing-literature-corpus",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The pilot proves the end-to-end path on ~25 OA articles: gate -> ingest -> grounded entity-mention extraction -> human verification -> released outcome. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. It is gated on a realistic consumption path first (KG maintainer or Zenodo fallback) so a real released outcome exists; every assertion is aggregate-only and groundedness-checked.",
+  "objective": "Curate ~25 OA articles end-to-end with grounded, verified entity-mention extraction and release the result via a real consumption path.",
+  "acceptanceCriteria": [
+    "Pilot gated on a realistic consumption path first: the ewsr1-fli1-knowledge-graph maintainer agreeing to consume the output, or a Zenodo self-publish fallback (so a real released outcome exists).",
+    "All ~25 articles passed gate-004 with committed artifacts (license bucket + PII disposition).",
+    "Entity-mention extraction produced; 100% of accepted assertions pass the automated groundedness re-location check (quote re-found at recorded offsets) and are human-verified; every assertion has aggregateOnly:true.",
+    "Provenance complete per article (PMCID/DOI, retrieval date, license id+URL+snapshot, attribution).",
+    "Released via the KG consumer or Zenodo fallback with a recorded outcome artifact (outcomes/pilot.json) -- or submitted with the blocker surfaced if neither materializes."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "output/pilot/ (+ outcomes/pilot.json)",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

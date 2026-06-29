@@ -1,0 +1,36 @@
+{
+  "id": "ewing-literature-corpus-datasheet-i18n-025",
+  "title": "Translate the corpus Datasheet/summary (domain reviewer)",
+  "project": "ewing-literature-corpus",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science",
+    "translation"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Translating the corpus Datasheet/summary widens reuse, but oncology terminology must be faithful and no medical advice may be introduced. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. The target language is chosen together with a named language reviewer (not fabricated), and a domain (oncology) reviewer verifies terminology. The Datasheet is our own CC-BY-4.0 content, so the translation stays CC-BY-4.0; per-article licenses are unaffected.",
+  "objective": "Produce a faithful translation of the corpus Datasheet/summary, verified by a language reviewer and a domain (oncology) reviewer.",
+  "acceptanceCriteria": [
+    "Translation of the corpus Datasheet/summary produced for a target language confirmed with a named language reviewer (language not fabricated; selected with the reviewer).",
+    "Domain (oncology) reviewer verifies that medical/scientific terminology is faithfully translated and no medical advice is introduced.",
+    "Translation preserves the source Datasheet's CC-BY-4.0 license and attribution; per-article licenses are unaffected."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "output/datasheet/i18n/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

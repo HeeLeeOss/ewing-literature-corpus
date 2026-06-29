@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-release-019",
+  "title": "Versioned corpus + extraction release (Zenodo DOI + Datasheet + Croissant/BioC)",
+  "project": "ewing-literature-corpus",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The corpus + extraction are released as a versioned, citable artifact with a Datasheet and Croissant/BioC export. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Mixed-license labeling must be correct per record, and a final license+PII sign-off confirms no ND full text or identifiable detail is present.",
+  "objective": "Release the versioned corpus + extraction with a Zenodo DOI, Datasheet, and Croissant/BioC export.",
+  "acceptanceCriteria": [
+    "Corpus + extraction released as a versioned, citable artifact (Zenodo DOI) with a Datasheet (motivation, composition, collection, license mix, PII stance, limitations) and Croissant/BioC export.",
+    "Mixed-license labeling correct per record; our added content CC-BY-4.0; code MIT; no ND full text or identifiable detail present (final license+PII sign-off recorded).",
+    "Eval report for the release attached (F1, kappa, groundedness pass rate)."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "output/release/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "ewing-literature-corpus-license-clf-009",
+  "title": "Automated license classifier + ND/NC routing",
+  "project": "ewing-literature-corpus",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Scaling the corpus needs an automated license classifier that sorts each article into the fixed PMC OA license bucket and routes ND/closed to metadata-only. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. The classifier never upgrades a bucket automatically; borderline cases default conservative and go to human review.",
+  "objective": "Build the automated license classifier that buckets each article and routes ND/NC per gate-004.",
+  "acceptanceCriteria": [
+    "Classifies each article into the fixed PMC OA license bucket from its machine-readable license; routes ND/closed to metadata-only and CC0/BY/SA/NC to full text per gate-004.",
+    "Validated against a hand-labeled sample (>= 50 articles); reports accuracy; any disagreement defaults to the more conservative bucket (metadata-only) pending human review.",
+    "Never upgrades a license bucket automatically; a human reviewer confirms borderline cases.",
+    "Code MIT-licensed; tests + CI green; no credentials committed."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "src/license-classifier/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

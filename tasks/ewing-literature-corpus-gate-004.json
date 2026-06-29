@@ -1,0 +1,37 @@
+{
+  "id": "ewing-literature-corpus-gate-004",
+  "title": "License-bucket + PII/case-report triage gate (blocking)",
+  "project": "ewing-literature-corpus",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Every per-article task requires a committed license + PII gate artifact before work proceeds; this design-spec defines that blocking gate as a fixed, pre-decided rule rather than ad-hoc judgement. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. The gate decides full-text vs metadata-only and aggregate-only vs exclude, and is a hard precondition for ingestion and the pilot.",
+  "objective": "Specify the license-bucket + PII/case-report triage gate, including the fixed routing policy and the per-article PASS/METADATA-ONLY/EXCLUDE artifact format.",
+  "acceptanceCriteria": [
+    "Encodes the PMC OA license-bucket policy (CC0/CC-BY/CC-BY-SA/NC -> full text + derivatives; ND -> metadata + capped grounding quotes; unclear/non-OA -> metadata only) as a fixed, pre-decided rule, not ad-hoc judgement.",
+    "Objective criterion: full text included only if in PMC OA and derivativesAllowed:true recorded from a cited license id/URL; missing/unparseable/ND => metadata-only. No default-allow.",
+    "PII/case-report methodology: article-type heuristic (case-report, \"a N-year-old\"), direct-identifier scan, rare-disease quasi-identifier flag (age+sex+geography+diagnosis date); any flag => aggregate-only or exclude; never re-identify.",
+    "Requires a license snapshot (committed copy + SHA-256 + Wayback URL) and produces a committed PASS/METADATA-ONLY/EXCLUDE artifact per article recording which checks ran and what fired.",
+    "COSMIC/OncoKB cross-references limited to bare stable IDs (no redistribution); flagged."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "gate/license-pii-gate.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

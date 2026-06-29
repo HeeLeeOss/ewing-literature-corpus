@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-api-024",
+  "title": "Read-only query interface over the corpus (no PII, no advice)",
+  "project": "ewing-literature-corpus",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A read-only query interface helps consumers query the corpus by entity/assertion while exposing no PII and no medical advice. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Every result returns provenance and only aggregate, grounded, license-permitted content.",
+  "objective": "Build a read-only query interface over the corpus that exposes no PII and no advice.",
+  "acceptanceCriteria": [
+    "Read-only query interface over the corpus lets consumers query by entity/assertion; returns provenance with every result.",
+    "Interface exposes no PII and no medical advice; only aggregate, grounded, license-permitted content is served.",
+    "Code MIT-licensed; tests + CI green; DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "src/api/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

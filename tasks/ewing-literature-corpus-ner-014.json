@@ -1,0 +1,36 @@
+{
+  "id": "ewing-literature-corpus-ner-014",
+  "title": "Grounded entity extraction (genes/fusions/cell lines/drugs/disease)",
+  "project": "ewing-literature-corpus",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Structured extraction at scale starts with grounded entity extraction over the curated corpus, where every output carries a verbatim source span and the groundedness check is enforced in CI. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. All assertions are aggregate-only; no individual-patient content is extracted.",
+  "objective": "Build grounded entity extraction (genes/proteins, fusions, cell lines, drugs, disease concepts, model organism, assay/method) with mandatory source spans.",
+  "acceptanceCriteria": [
+    "Extracts entities (genes/proteins, EWSR1-ETS fusion types, cell lines, drugs, disease concepts, model organism, assay/method); every output carries a verbatim source span (PMCID + section + offsets + quote).",
+    "The deterministic groundedness re-location check passes for 100% of accepted outputs; ungrounded outputs are dropped (CI enforces this).",
+    "All assertions aggregateOnly:true; no individual-patient content extracted.",
+    "Code MIT-licensed; tests + CI green."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "src/ner/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

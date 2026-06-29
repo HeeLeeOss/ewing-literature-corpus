@@ -298,3 +298,110 @@ The first build task in M0 (`schema-002`), as a complete, schema-valid Task JSON
   named consumer (KG maintainer or external) confirms use (`partner-013`).
 - Hard gates before any per-article work: License+PII reviewer named (`reviewers-001`) and a committed
   `gate-004` artifact per article.
+
+---
+
+## Acceptance criteria — additional tasks
+
+Acceptance criteria for the remaining rows (the "key tasks" blocks above cover the rest). These mirror
+the per-task `acceptanceCriteria` in the generated `tasks/*.json`.
+
+- **reviewers-001 (name/secure blocking reviewers)**
+  - [ ] A named License+PII reviewer recorded (affiliation + contact channel), scope = license-bucket
+        decisions + PII/case-report dispositions sign-off.
+  - [ ] A named domain (oncology) reviewer recorded, scope = scientific-faithfulness sign-off.
+  - [ ] Both documented as blocking gates (no self-review); pilot-007 and medium-risk extraction cannot
+        be delivered without the relevant sign-off.
+  - [ ] If a role cannot be filled, the blocker is surfaced and dependent tasks remain blocked.
+
+- **extract-schema-003 (extraction/assertion schema)**
+  - [ ] Each assertion carries a mandatory verbatim source span (PMCID + section + offsets + quote)
+        consistent with the schema-002 BioC offset model.
+  - [ ] Each assertion carries `aggregateOnly:true` + normalization fields (`ontologyId`,
+        `ontologyVersion`, `normConfidence`); unmapped entities flagged.
+  - [ ] Schema structurally forbids individual-patient content and clinical advice.
+  - [ ] ≥ 1 worked example assertion; validates in CI; DCO signed-off.
+
+- **query-005 (Ewing PMC retrieval query)**
+  - [ ] PMC OA retrieval query documented (terms, fields, filters), scoped to the PMC OA Subset.
+  - [ ] Recall/precision measured against a documented seed set; numbers reported.
+  - [ ] Reproducible: committed query string + seed-set list + method.
+
+- **outreach-008 (consumer outreach + shortlist)**
+  - [ ] Shortlist compiled (KG project, sarcoma labs, advocacy) with a contact channel per candidate.
+  - [ ] ≥ 1 outreach thread opened, with status recorded.
+  - [ ] No commitments fabricated; `verifiedNeed` stays `false` until a consumer confirms (partner-013).
+
+- **dedup-010 (dedup + versioning)**
+  - [ ] Dedupes by PMCID and DOI; near-duplicate handling documented.
+  - [ ] Versioning by PMCID/DOI so updates supersede prior versions without losing provenance.
+  - [ ] Tests + CI green; MIT; no credentials committed; DCO signed-off.
+
+- **eval-017 (extraction evaluation harness)**
+  - [ ] Computes P/R/F1 of entity extraction + normalization against the gold set (gold-016).
+  - [ ] Deterministic groundedness re-location check reports a pass rate; ungrounded outputs flagged.
+  - [ ] Report format defined (F1, κ reference, groundedness pass rate); tests + CI green; MIT; DCO signed-off.
+
+- **relation-022 (grounded relation extraction)**
+  - [ ] Gene-drug / fusion-phenotype relations, each with a verbatim source span and `aggregateOnly:true`.
+  - [ ] Groundedness check enforced in CI; ungrounded relations dropped.
+  - [ ] Domain reviewer verifies a sample; no patient-level data or advice. MIT; tests + CI green.
+
+- **section-023 (IMRaD/section parser)**
+  - [ ] Segments articles into typed sections with BioC-compatible offsets consistent with schema-002.
+  - [ ] Per-section indexing improves extraction targeting/grounding; golden fixtures in CI.
+  - [ ] MIT; tests + CI green; DCO signed-off.
+
+- **api-024 (read-only query interface)**
+  - [ ] Query by entity/assertion; provenance returned with every result.
+  - [ ] No PII, no medical advice; only aggregate, grounded, license-permitted content served.
+  - [ ] MIT; tests + CI green; DCO signed-off.
+
+- **datasheet-i18n-025 (Datasheet translation)** — `type: writing`, `deliverable: translation`.
+  - [ ] Translation of the Datasheet/summary for a target language confirmed with a named language
+        reviewer (language not fabricated; chosen with the reviewer).
+  - [ ] Domain (oncology) reviewer verifies terminology is faithful; no medical advice introduced.
+  - [ ] Preserves the source Datasheet's CC-BY-4.0 license + attribution; per-article licenses unaffected.
+
+- **funded-batch-026 (funded large-batch extraction)** — `lane: funded`, `fundedBudgetUsd` (hard cap).
+  - [ ] Runs only via `packages/runner` on an Anthropic API key with a hard per-task budget cap; never
+        exceeds it. (`fundedBudgetUsd` in the JSON is a placeholder cap pending escrow definition.)
+  - [ ] Produces only grounded, aggregate-only assertions (ner-014/biomarker-018 guardrails); groundedness
+        check enforced.
+  - [ ] Public cost ledger recorded; engaged only if donated-lane throughput is insufficient.
+  - [ ] Domain + License/PII reviewer sign-off recorded.
+
+---
+
+## Fan-out note
+
+This backlog was decomposed **one Task JSON per table row** (representative tasks only); no row was
+fanned out into per-item JSONs. The would-be fan-out dimensions are all open-ended or unsecured at this
+stage and are **not** enumerated in `PLAN.md`/`TASKS.md`: the pilot's "~25 articles" and the ≥150/≥400
+corpus targets name no specific article list; `datasheet-i18n-025` names no specific language (chosen with
+a language reviewer); no concrete source/dataset list is fixed. Per the decomposition policy these expand
+into concrete per-item tasks only once a partner/scope is confirmed (`partner-013`) — items are never
+fabricated. `verifiedNeed` stays `false` and `requestor` stays `TO BE SECURED` until then.
+
+---
+
+## Generated task index
+
+All 26 rows now have an executable `tasks/<id>.json` (schema-validated; `filename == id`).
+`ewing-literature-corpus-schema-002.json` is the pre-existing seed; the other 25 were generated here.
+
+- M0: `ewing-literature-corpus-reviewers-001`, `ewing-literature-corpus-schema-002` (seed),
+  `ewing-literature-corpus-extract-schema-003`, `ewing-literature-corpus-gate-004`,
+  `ewing-literature-corpus-query-005`, `ewing-literature-corpus-ingest-006`,
+  `ewing-literature-corpus-pilot-007`, `ewing-literature-corpus-outreach-008`
+- M1: `ewing-literature-corpus-license-clf-009`, `ewing-literature-corpus-dedup-010`,
+  `ewing-literature-corpus-pii-audit-011`, `ewing-literature-corpus-build-012`,
+  `ewing-literature-corpus-partner-013`
+- M2: `ewing-literature-corpus-ner-014`, `ewing-literature-corpus-normalize-015`,
+  `ewing-literature-corpus-gold-016`, `ewing-literature-corpus-eval-017`,
+  `ewing-literature-corpus-biomarker-018`
+- M3: `ewing-literature-corpus-release-019`, `ewing-literature-corpus-reuse-020`,
+  `ewing-literature-corpus-refresh-021`
+- Backlog: `ewing-literature-corpus-relation-022`, `ewing-literature-corpus-section-023`,
+  `ewing-literature-corpus-api-024`, `ewing-literature-corpus-datasheet-i18n-025`,
+  `ewing-literature-corpus-funded-batch-026`

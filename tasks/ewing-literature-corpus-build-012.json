@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-build-012",
+  "title": "Curate corpus to >= 150 articles (gate-passed, provenanced)",
+  "project": "ewing-literature-corpus",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "This task scales the corpus to >= 150 gate-passed, provenanced articles with an honestly reported license mix. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Every article carries a committed gate artifact and complete provenance; per-article original licenses are retained.",
+  "objective": "Curate the corpus to >= 150 OA articles, each gate-passed with a committed artifact and complete provenance.",
+  "acceptanceCriteria": [
+    ">= 150 OA articles curated, each gate-passed with a committed artifact and complete provenance.",
+    "License mix recorded honestly (per-article original license retained; redistributable vs metadata-only counts reported).",
+    "Corpus validates against schema-002; dedup applied; CI green."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "output/corpus/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

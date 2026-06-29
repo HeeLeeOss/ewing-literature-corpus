@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-section-023",
+  "title": "IMRaD/section structure parser + per-section indexing",
+  "project": "ewing-literature-corpus",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A section parser segments articles into typed IMRaD sections with BioC-compatible offsets, improving extraction targeting and grounding. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Offsets stay consistent with schema-002.",
+  "objective": "Build the IMRaD/section structure parser with per-section indexing over schema-002 records.",
+  "acceptanceCriteria": [
+    "IMRaD/section structure parser segments articles into typed sections with BioC-compatible offsets consistent with schema-002.",
+    "Per-section indexing improves extraction targeting and grounding; golden fixtures exercised in CI.",
+    "Code MIT-licensed; tests + CI green; DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "src/section-parser/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

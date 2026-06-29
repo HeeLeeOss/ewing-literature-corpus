@@ -1,0 +1,35 @@
+{
+  "id": "ewing-literature-corpus-eval-017",
+  "title": "Extraction evaluation harness (P/R/F1 vs gold + groundedness check)",
+  "project": "ewing-literature-corpus",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "An evaluation harness measures extraction quality against the gold set and reports the groundedness pass rate. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. The harness makes quality claims checkable and reproducible in CI.",
+  "objective": "Build the extraction evaluation harness reporting P/R/F1 vs gold plus the groundedness pass rate.",
+  "acceptanceCriteria": [
+    "Computes precision/recall/F1 of entity extraction + normalization against the gold set (gold-016).",
+    "Deterministic groundedness re-location check reports a pass rate; ungrounded outputs flagged.",
+    "Report format defined (entity-normalization F1, kappa reference, groundedness pass rate); tests + CI green; MIT; DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "src/eval/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

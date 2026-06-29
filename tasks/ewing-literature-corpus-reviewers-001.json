@@ -1,0 +1,36 @@
+{
+  "id": "ewing-literature-corpus-reviewers-001",
+  "title": "Name/secure License+PII reviewer and domain (oncology) reviewer (blocking gate roles)",
+  "project": "ewing-literature-corpus",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Ewing sarcoma corpus work touches per-article licensing and potential case-report/PII content, so two blocking reviewer roles must be filled before any per-article curation or extraction proceeds: a License+PII reviewer and a domain (oncology) reviewer. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. This task names/secures those reviewers; it is a hard gate for pilot-007 and every medium-risk extraction task (no self-review).",
+  "objective": "Identify and secure a named License+PII reviewer and a named domain (oncology) reviewer, documenting their roles as blocking gate reviewers.",
+  "acceptanceCriteria": [
+    "A named License+PII reviewer is recorded (affiliation + contact channel) with scope: license-bucket decisions and PII/case-report dispositions sign-off.",
+    "A named domain (oncology) reviewer is recorded with scope: scientific-faithfulness sign-off on extracted assertions.",
+    "Both roles are documented as blocking gates: pilot-007 and all medium-risk extraction tasks cannot be marked delivered without the relevant reviewer sign-off, and no author reviews their own work.",
+    "If a role cannot be filled, the blocker is surfaced explicitly and dependent tasks remain blocked."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md"
+  ],
+  "output": "governance/reviewers.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "ewing-literature-corpus-ingest-006",
+  "title": "PMC OA ingestion tool (OA Web Service/BioC API) + license/provenance capture",
+  "project": "ewing-literature-corpus",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-access",
+    "text-mining",
+    "open-science"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The ingestion tool retrieves Ewing articles from the PMC OA Subset and emits canonical records valid against schema-002, capturing machine-readable license and provenance per article. Binding cancer guardrails apply: open-access (PMC OA Subset) / aggregate / de-identified data only; no identifiable patient data; no medical advice; provenance on every assertion. Non-OA hits are reduced to bibliographic metadata only; no NCBI API key is ever committed.",
+  "objective": "Build the PMC OA ingestion tool that emits schema-002-valid records with captured license and provenance.",
+  "acceptanceCriteria": [
+    "Retrieves articles only from the PMC OA Subset (OA Web Service / BioC API / OA packages); non-OA hits reduced to bibliographic metadata only.",
+    "Captures and records the machine-readable license, license URL, and snapshot per article.",
+    "Emits canonical records valid against schema-002; ships golden fixtures (synthetic/public) exercised in CI; no NCBI API key committed (env var only).",
+    "Code MIT-licensed; pnpm build && pnpm test && pnpm lint green; DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "PubMed Central Open Access Subset documentation (OA Web Service; BioC API)"
+  ],
+  "output": "src/ingest/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
