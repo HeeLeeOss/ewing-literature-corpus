@@ -28,7 +28,7 @@ normalized entities (genes, fusion types, cell lines, drugs, disease concepts) a
 source-anchored research assertions — where **every extracted assertion links back to the exact
 sentence (PMCID + section + character offsets + verbatim quote) it came from.** The corpus is
 designed first as research infrastructure: its earliest, most concrete beneficiary is the sibling
-Elyos project `ewsr1-fli1-knowledge-graph`, which needs a licensed, provenanced text substrate.
+Hee-Lee Oss project `ewsr1-fli1-knowledge-graph`, which needs a licensed, provenanced text substrate.
 
 The deliverable is **a curated, licensed, provenanced corpus + extraction layer — not medical
 advice, not patient-facing guidance, and not a republication of closed-access papers.** Two hard
@@ -53,7 +53,7 @@ factual (an extraction that misstates the science).
 **Who is helped.**
 - **Ewing sarcoma researchers and trainees**, especially in small or under-resourced labs, who need
   to find, read, and reconcile the existing literature quickly and reliably.
-- **Downstream Elyos cancer projects** that need a licensed, provenanced text substrate —
+- **Downstream Hee-Lee Oss cancer projects** that need a licensed, provenanced text substrate —
   most directly `ewsr1-fli1-knowledge-graph` (knowledge graph of fusion biology),
   `ewing-drug-target-evidence`, `ewing-biomarker-evidence-cards`, and `ewing-research-landscape`.
 - **Patient-advocacy and rare-cancer foundations** that fund and synthesize research and need a
@@ -225,7 +225,7 @@ extraction/normalization aid, never as an authority; the **source paper is the o
 human verifies. (Per CLAUDE.md, the donated lane prepares workspaces and humans run their agent; the
 funded lane, if ever used, runs under `packages/runner` with a hard budget cap.)
 
-**Tech stack.** TypeScript, ESM, pnpm workspaces (Elyos conventions). Ingestion/normalization/eval
+**Tech stack.** TypeScript, ESM, pnpm workspaces (Hee-Lee Oss conventions). Ingestion/normalization/eval
 are small Node packages with minimal dependencies; no runtime service. Corpus + extraction stored as
 **JSONL** (+ BioC JSON for interop, Croissant for dataset metadata). Everything runs locally or in CI.
 
@@ -401,7 +401,7 @@ M3 release/reuse depends on a quality-passing extraction body from M2.
 The itemized, schema-mapped backlog lives in `TASKS.md`, organized by the milestones above, each with
 a task table (`ID | Title | Type | Size | Risk | Deliverable | Depends on | Reviewer`), acceptance
 criteria for the most important tasks, and a milestone Definition of Done. A sized-but-unscheduled
-backlog and one complete, schema-valid example Task JSON are included there. Per Elyos guardrails,
+backlog and one complete, schema-valid example Task JSON are included there. Per Hee-Lee Oss guardrails,
 every per-article task still requires its own committed license + PII gate artifact before work
 proceeds; listing a task does not pre-approve any article.
 
@@ -436,7 +436,7 @@ proceeds; listing a task does not pre-approve any article.
 - **Flagged / excluded databases:** **COSMIC, OncoKB** (non-commercial/custom — cross-reference by
   ID only, no redistribution). **dbGaP, EGA, individual-level biobanks** (controlled-access — out of
   scope entirely).
-- **Elyos pieces:** Task JSON schema (`packages/schema`); donated-lane CLI workspace/PR flow
+- **Hee-Lee Oss pieces:** Task JSON schema (`packages/schema`); donated-lane CLI workspace/PR flow
   (`packages/cli`); good-deed definition + refusal guardrails; sibling project
   `ewsr1-fli1-knowledge-graph` (primary downstream consumer). No funded-lane/runner dependency unless
   a budgeted extraction batch is explicitly chosen (then `packages/runner` + hard `fundedBudgetUsd` cap).
@@ -463,7 +463,7 @@ proceeds; listing a task does not pre-approve any article.
   surfaces: CI, the released corpus files, and the upstream-content/PII risk.
 - **Secrets handling:** ingestion uses public PMC/Entrez endpoints; an NCBI API key (rate limits) is
   optional and, if used, is supplied via env var by the human — never written to logs, receipts, or
-  committed files (per Elyos rules). No credentials in the repo.
+  committed files (per Hee-Lee Oss rules). No credentials in the repo.
 - **PII:** the dominant concern is *upstream* identifiable patient content in case reports. Handled by
   the mandatory triage + aggregate-only enforcement; we never download/store identifiable images,
   never re-identify, and exclude on any signal.
@@ -498,10 +498,10 @@ proceeds; listing a task does not pre-approve any article.
 
 ## References
 
-- Elyos work rules — `C:\code\elyos\CLAUDE.md`
-- Good Deed Definition + risk tiers — `C:\code\elyos\docs\good-deed-definition.md`
-- Task JSON schema — `C:\code\elyos\packages\schema\src\schemas.ts`
-- Portfolio roadmap (Track 8 cancer guardrails) — `C:\code\elyos\planning\ROADMAP.md`
+- Hee-Lee Oss work rules — `C:\code\hee-lee-oss\CLAUDE.md`
+- Good Deed Definition + risk tiers — `C:\code\hee-lee-oss\docs\good-deed-definition.md`
+- Task JSON schema — `C:\code\hee-lee-oss\packages\schema\src\schemas.ts`
+- Portfolio roadmap (Track 8 cancer guardrails) — `C:\code\hee-lee-oss\planning\ROADMAP.md`
 - Sibling project — `ewsr1-fli1-knowledge-graph` (primary downstream consumer)
 - PubMed Central Open Access Subset (license terms; OA Web Service; BioC API)
 - BioC text-mining interchange format; Croissant ML metadata specification; JATS
@@ -551,7 +551,7 @@ in the body above (each notes where).
     confirmation; no self-report) — applied in *Success metrics*.
 17. **Added a gold-standard eval set with inter-annotator agreement (κ ≥ 0.7)** and an eval harness
     reporting F1 — applied in metrics, M2, and tasks.
-18. **License snapshot format fixed** (committed copy + SHA-256 + Wayback URL), matching Elyos
+18. **License snapshot format fixed** (committed copy + SHA-256 + Wayback URL), matching Hee-Lee Oss
     provenance norms — applied in provenance model.
 19. **Added retraction handling** in the refresh process (check PubMed; flag/remove) — applied in
     *Sustainability*.

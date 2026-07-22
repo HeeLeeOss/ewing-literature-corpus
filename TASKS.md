@@ -2,9 +2,9 @@
 
 > Status: Draft · Version: 0.1.0 · Last updated: 2026-06-28 · Owner: TBD (maintainer) · Lane: donated
 
-## How these tasks map to Elyos
+## How these tasks map to Hee-Lee Oss
 
-Each task below becomes an Elyos **Task JSON** validated against
+Each task below becomes a Hee-Lee Oss **Task JSON** validated against
 `packages/schema/src/schemas.ts`. Field mapping:
 
 - `id` — stable slug ID from the tables (e.g. `ewing-literature-corpus-schema-002`).
@@ -271,8 +271,8 @@ The first build task in M0 (`schema-002`), as a complete, schema-valid Task JSON
     "pnpm build && pnpm test && pnpm lint pass for any committed tooling/JSON-schema; commit is DCO signed-off."
   ],
   "resources": [
-    "C:\\code\\elyos\\planning\\projects\\ewing-literature-corpus\\PLAN.md",
-    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "C:\\code\\hee-lee-oss\\planning\\projects\\ewing-literature-corpus\\PLAN.md",
+    "C:\\code\\hee-lee-oss\\planning\\ROADMAP.md",
     "PubMed Central Open Access Subset documentation (license terms; OA Web Service; BioC API)",
     "BioC text-mining interchange format specification",
     "Croissant ML metadata specification"

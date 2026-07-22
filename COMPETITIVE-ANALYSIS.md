@@ -1,6 +1,6 @@
 # Competitive & Improvement Analysis — `ewing-literature-corpus`
 
-*Prepared 2026-06-29. Web-grounded; sources cited inline. Scope: the Elyos cancer-research good-deed
+*Prepared 2026-06-29. Web-grounded; sources cited inline. Scope: the Hee-Lee Oss cancer-research good-deed
 project that assembles a license-clear, provenanced, machine-readable corpus of Ewing sarcoma
 open-access literature (PMC OA Subset / Europe PMC) with grounded structured extraction, for
 text-mining / meta-research. Cancer guardrails: open-access / license-clear text only; provenance +

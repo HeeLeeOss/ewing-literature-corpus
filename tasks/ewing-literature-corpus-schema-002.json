@@ -22,8 +22,8 @@
     "pnpm build && pnpm test && pnpm lint pass for any committed tooling/JSON-schema; commit is DCO signed-off."
   ],
   "resources": [
-    "C:\\code\\elyos\\planning\\projects\\ewing-literature-corpus\\PLAN.md",
-    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "C:\\code\\hee-lee-oss\\planning\\projects\\ewing-literature-corpus\\PLAN.md",
+    "C:\\code\\hee-lee-oss\\planning\\ROADMAP.md",
     "PubMed Central Open Access Subset documentation (license terms; OA Web Service; BioC API)",
     "BioC text-mining interchange format specification",
     "Croissant ML metadata specification"
