@@ -6,7 +6,7 @@ Ewing sarcoma research is published across thousands of articles, but the knowle
 
 **Definition of shipped:** passed the license + PII gate with a committed artifact; (2) every accepted assertion passes the automated groundedness check and carries required-tier review sign-off (domain reviewer for medium-risk assertions); (3) an eval run against the gold set meets the quality targets; (4
 
-This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/HeeLeeOss/hee-lee-oss-downloads
 
 ## Plan
 - [PLAN.md](./PLAN.md) — robust enterprise plan (vision, architecture, roadmap, risks; includes an applied-improvements appendix + review sign-off)
@@ -16,7 +16,7 @@ This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it wit
 ## Contribute
 ```bash
 hee-lee-oss browse
-hee-lee-oss next --repo Hee-Lee-Oss-Projects/ewing-literature-corpus --no-fork
+hee-lee-oss next --repo HeeLeeOss/ewing-literature-corpus --no-fork
 ```
 
 ## Licensing & review
